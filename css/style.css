@@ -2,7 +2,7 @@
 #08d
 */
 
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:400');
+/*@import url('https://fonts.googleapis.com/css?family=Ubuntu:400');*/
 html {
 	font-size: 1em;
 }
@@ -141,6 +141,36 @@ div.row div.column {
 article p {
 	width: 50%;
 }
+
+
+/*
+======*/
+	/**/
+	body {
+		padding-top: 88px;
+	}
+	/**/
+	header {
+		z-index: 10;
+
+		position: fixed;
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: 88px;
+
+		background-color: #ffffff;
+
+		transition: box-shadow 0.3s ease-in-out;
+	}
+	header.header--fixed {
+		box-shadow: 0 0 10px 0 rgba(0,0,0, 0.25);
+
+		transition: box-shadow 0.3s ease-in-out;
+	}
+/*
+======*/
 
 
 
