@@ -1,0 +1,177 @@
+/*
+#08d
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400');
+html {
+	font-size: 1em;
+}
+html * {
+	font-family: Lato, sans-serif;
+	font-size: 1.50rem;
+	line-height: 1.50em;
+	margin: 0;
+	padding: 0;
+	color: #222;
+	font-weight: 400;
+}
+p, li, h1, h2, h3, h4 {
+	margin-bottom: 1.50rem;
+	padding: 0;
+}
+ul li {
+	margin-left: 0;
+}
+h1,
+h2,
+p.title {
+	font-size: 3.00rem;
+	font-weight: 600;
+}
+p.title {
+	text-align: center;
+}
+h3 {
+	font-size: 1.50rem;
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:active,
+a.button { 
+	text-decoration: none;
+	font-weight: 600;
+	font-size: inherit;
+	border-bottom: 2px solid;
+}
+a.button {
+	display: inline-block;
+	font-weight: 600;
+}
+a.button:hover {
+	font-weight: 600;
+}
+strong,
+span.highlight {
+	font-weight: 600;
+	color: inherit;
+}
+hr {
+	border: none;
+	height: 1px;
+	background: #ccc;
+	margin: 0 0; /* MOITIÉ du padding vertical entre sections */
+}
+
+
+/**/
+header div.row,
+nav#breadcrumb div.row,
+section div.row,
+article div.row,
+footer div.row {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0;
+}
+section div.row,
+article div.row,
+footer div.row {
+	padding-bottom: 3rem;
+	padding-top: 3rem;
+}
+
+
+	
+
+/**/
+header#topbar .logo {
+	text-decoration: none;
+	padding: 0;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+	border: none;
+	display: block;
+	font-size: 3.00rem;
+}
+
+/**/
+nav#breadcrumb ul {
+	margin : 0;
+	margin-left: 10.00rem;
+	padding : 0;
+	display: flex;
+	flex-direction: row;
+}
+nav#breadcrumb li {
+	margin : 0;
+	padding : 0;
+	list-style: none;
+	padding-right : 0.75rem;
+	padding-bottom : 1.25rem;
+	padding-top : 1.25rem;
+	font-size: 1.25rem;
+}
+
+/**/
+section#intro,
+footer {
+	background-color: #08d;
+}
+section#intro h1,
+section#intro p,
+footer p {
+	color: #fff;
+}
+section#intro img.croissance {
+	width: 85%;
+	margin: auto 0;
+}
+section#intro div.row,
+footer div.row {
+	display: flex;
+	flex-direction: row;
+}
+div.row div.column {
+	width: 50%;
+}
+
+/**/
+article p {
+	width: 50%;
+}
+
+
+
+/* sm <= 568px */
+@media screen and (max-width: 35.5em) {
+}
+
+/* md <= 768px */
+@media screen and (max-width: 48em) {
+}
+
+/* lg <= 1024px */
+@media screen and (max-width: 64em) {
+}
+
+/* xl <= 1280px */
+@media screen and (max-width: 80em) {
+}
+
+/* <= 1440px */
+@media screen and (max-width: 90em) {
+}
+
+/* <= 1600px */
+@media screen and (max-width: 100em) {
+}
+
+/* <= 1760px */
+@media screen and (max-width: 110em) {
+}
+
+/* <= 1920px */
+@media screen and (max-width: 120em) {
+}
