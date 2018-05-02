@@ -26,7 +26,8 @@
 <body>
 <header id="topbar">
     <div class="row">
-        <a href="./" class="logo">LOGO</a>
+        <a href="./" class="logo" logo-js>LOGO</a>
+        <a href="#" class="btn cta">Demande d'offre</a>
     </div>
 </header>
         

@@ -1,7 +1,7 @@
 <?php
 $page = [
     'id' => '2100',
-    'title' => "TEST by {Your name here} - Page One",
+    'title' => "TEST by Andrii Kovalenko - Page One",
     'description' => "",
 ];
 include_once("inc/header.php");

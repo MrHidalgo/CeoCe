@@ -8,7 +8,7 @@
             </p>
         </div>
         <div class="column">
-            <p><a href="">Demande d'offre</a></p>
+            <p><a href="#" class="btn" title="Demande d'offre">Demande d'offre</a></p>
             <p><a href="mailto:hello@e-mail.com">Send an e-mail</a></p>
         </div>
     </div>

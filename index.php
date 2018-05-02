@@ -17,7 +17,7 @@ include_once("inc/header.php");
             <p>Etiam libero mauris, mollis ac tincidunt vitae, malesuada ut ex. Donec congue hendrerit magna, ut vulputate enim ornare nec.</p>
             <p>Duis ut magna vitae lorem tempor sodales eget et tortor.</p>
             <p>Nam sed congue lectus. Donec sapien turpis, cursus sed mattis vitae, aliquet ac est. Phasellus facilisis justo vel nibh semper molestie non nec odio. Integer eget odio sem. Cras auctor massa enim, at sollicitudin urna iaculis vitae. Pellentesque magna sem, tristique nec lacinia at, cursus ac justo.</p>
-            <p><a href="#choix">More ></a></p>
+            <p><a href="#choix" class="btn" title="More">More</a></p>
             <p>Nullam sollicitudin tincidunt nunc, efficitur pretium magna gravida in. Ut bibendum orci magna, vel vulputate enim varius et. Nullam maximus leo quam, quis mattis nulla fermentum vitae.</p>
         </div>
     </div>
@@ -32,12 +32,12 @@ include_once("inc/header.php");
         <div class="column">
             <h2>Chanter comme un ange</h2>
             <p>Pellentesque ut facilisis quam, lacinia ultrices tortor. In bibendum, erat in venenatis feugiat, mauris libero porttitor est, sed aliquet arcu tellus nec est. Suspendisse facilisis arcu eget fringilla efficitur. Praesent sit amet felis tellus. In ac ultricies ligula. Fusce commodo turpis enim, id mollis sapien laoreet a.</p>
-            <p><a href="./page-one">Vive les anges ></a></p>
+            <p><a href="./page-one" class="btn" title="Vive les anges">Vive les anges</a></p>
         </div>
         <div class="column">
             <h2>Manger des pommes</h2>
             <p>Nulla interdum mauris tellus, at dapibus velit auctor quis. Nulla sed ornare nunc. Duis venenatis lacus ut pellentesque suscipit. Donec viverra ullamcorper nisl, vitae eleifend massa congue lacinia. Praesent volutpat odio vitae leo aliquet, et condimentum ante efficitur. Fusce volutpat sed lectus sit amet fringilla.</p>
-            <p><a href="./page-one">Vive les Pommes ></a></p>
+            <p><a href="./page-one" class="btn" title="Vive les Pommes">Vive les Pommes</a></p>
         </div>
     </div>
 </section>
