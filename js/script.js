@@ -70,6 +70,22 @@ const smoothScroll = () => {
     });
 };
 
+/**
+ * @name sendMail
+ * @function
+ * @description
+ */
+const sendMail = () => {
+    const btn = document.querySelector("[sendMain-js]");
+
+    btn.addEventListener("click", (ev) => {
+        const elem = ev.currentTarget,
+            mailName = elem.querySelector("input").value;
+
+        elem.setAttribute("href", mailName);
+    });
+};
+
 
 /**
  * @function
@@ -78,4 +94,5 @@ const smoothScroll = () => {
 (() => {
     windowEventChange();
     smoothScroll();
+    sendMail();
 })();
