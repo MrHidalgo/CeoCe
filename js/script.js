@@ -8,10 +8,12 @@ const scrollWindowNavigationFixedLarge = () => {
     let countScroll = document.body.scrollTop || document.documentElement.scrollTop,
         headerBlock = document.getElementsByTagName("header")[0];
 
-    if (countScroll > 0) {
-        headerBlock.classList.add("header--fixed");
-    } else {
-        headerBlock.classList.remove("header--fixed");
+    if(window.innerWidth > 767) {
+        if (countScroll > 0) {
+            headerBlock.classList.add("header--fixed");
+        } else {
+            headerBlock.classList.remove("header--fixed");
+        }
     }
 
     if (countScroll > 50) {
