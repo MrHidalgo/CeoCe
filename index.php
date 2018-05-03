@@ -10,7 +10,7 @@ include_once("inc/header.php");
     <div class="row">
         <div class="column">
             <h1>This is simple but nice <br>TEST website :)</h1>
-            <img src="img/image.svg" class="croissance" alt="">
+            <img src="img/image.svg" class="croissance svg" alt="">
         </div>
         <div class="column">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -22,8 +22,8 @@ include_once("inc/header.php");
         </div>
     </div>
 </section>
-<section id="breadcrumb">
-</section>
+<!--<section id="breadcrumb">-->
+<!--</section>-->
 <section>
     <div class="row">
         <p class="title" id="choix">What do you whant to do&nbsp;?</p>
