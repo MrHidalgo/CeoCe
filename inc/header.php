@@ -9,7 +9,8 @@
     <meta name="description" content="<?php if (isset($page['description'])) {
         echo $page['description'];
     } ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php
     if (isset($page['noindex']) && ($page['noindex'] == "noindex")) {
         ?>
@@ -20,8 +21,10 @@
         ?>
         <link rel="canonical" href="https://caseo.ch/<?php echo $pages[$page['id']]['canonical']; ?>" />
     <?php } ?>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
+<!--    <link rel="stylesheet" href="css/style.min.css">-->
 </head>
 <body>
 <header id="topbar">
