@@ -14,7 +14,7 @@ const scrollWindowNavigationFixedLarge = () => {
         headerBlock.classList.remove("header--fixed");
     }
 
-    if(countScroll > 50) {
+    if (countScroll > 50) {
         document.body.classList.add('is-scroll');
     } else {
         document.body.classList.remove('is-scroll');
@@ -38,23 +38,90 @@ const windowEventChange = () => {
 
 
 /**
- * @name scrollTo
- * @function
  *
- * @param elem
- * @param offsetVal
- *
- * @description
+ * @returns {*}
  */
-const scrollTo = (elem, offsetVal) => {
-    const val = elem.offsetTop - offsetVal;
+function getBrowser() {
+    let ua = navigator.userAgent,
+        tem,
+        M = ua.match(/(opera|edge|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
 
-    window.scroll({
-        behavior: 'smooth',
-        left: 0,
-        top: val
-    });
-};
+    if (/trident/i.test(M[1])) {
+        tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
+        return {name: 'IE', version: (tem[1] || '')};
+    }
+
+    if (M[1] === 'Chrome') {
+        tem = ua.match(/\bOPR\/(\d+)/);
+
+        if (tem != null) {
+            return {name: 'Opera', version: tem[1]};
+        }
+
+        tem = ua.match(/\edge\/(\d+)/i);
+
+        if (tem != null) {
+            return {name: 'Edge', version: tem[1]};
+        }
+    }
+
+    M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?'];
+
+    if ((tem = ua.match(/version\/(\d+)/i)) != null) {
+        M.splice(1, 1, tem[1]);
+    }
+
+    return {
+        name: M[0],
+        version: M[1]
+    };
+}
+
+/**
+ *
+ * @param element
+ * @param to
+ * @param duration
+ */
+function scrollTo(element, to, duration) {
+    let start = element.scrollTop,
+        change = to - start,
+        increment = 20;
+
+    let animateScroll = function (elapsedTime) {
+        elapsedTime += increment;
+
+        let position = easeInOut(elapsedTime, start, change, duration);
+
+        element.scrollTop = position;
+
+        if (elapsedTime < duration) {
+            setTimeout(function () {
+                animateScroll(elapsedTime);
+            }, increment);
+        }
+    };
+
+    animateScroll(0);
+}
+
+/**
+ *
+ * @param currentTime
+ * @param start
+ * @param change
+ * @param duration
+ * @returns {*}
+ */
+function easeInOut(currentTime, start, change, duration) {
+    currentTime /= duration / 2;
+    if (currentTime < 1) {
+        return change / 2 * currentTime * currentTime + start;
+    }
+    currentTime -= 1;
+    return -change / 2 * (currentTime * (currentTime - 2) - 1) + start;
+}
+
 /**
  * @name smoothScroll
  * @function
@@ -67,11 +134,22 @@ const smoothScroll = () => {
         elem.addEventListener("click", (ev) => {
             ev.preventDefault();
 
+            const browser = getBrowser(),
+                browserName = browser.name;
+
+            let docElem = document.documentElement;
+
+            if (browserName === "Safari") {
+                docElem = document.body;
+            }
+
             const currentBtn = ev.currentTarget,
                 btnHref = currentBtn.getAttribute("href"),
                 headerHeight = document.querySelector("header").offsetHeight;
 
-            scrollTo(document.querySelector(btnHref), headerHeight);
+            const scrollElem = document.querySelector(btnHref).offsetTop - headerHeight;
+
+            scrollTo(docElem, scrollElem, 200);
         });
     });
 };
