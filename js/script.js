@@ -183,7 +183,7 @@ const changeImageSVG = () => {
             imgClass = element.getAttribute('class'),
             imgURL = element.getAttribute('src');
 
-        xhr = new XMLHttpRequest();
+        let xhr = new XMLHttpRequest();
 
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
